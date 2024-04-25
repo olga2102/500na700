@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-clean-order",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-prettier"
+  ],
+  "rules": {
+    "prettier/prettier": true,
+    "no-invalid-position-at-import-rule": null
+  }
+}

@@ -1,0 +1,39 @@
+header.header
+  div.container
+    div.header__wrapper
+      div.header__logo
+        a(href="#") 
+          img(src='assets/img/logo.svg')
+      div.header__menu
+        ul.header__menu-list 
+          li(class='header__menu-item header__menu-item--hassubmenu')
+            a(href='#' class='header__menu-submenu-link') О нас
+            ul.header__submenu-list 
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') О 500на700
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Документы
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Устойчивое развитие
+              li.header__submenu-item
+                a(href='#' class='header__menu-link') Команда
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Стратегия
+          li(class='header__menu-item header__menu-item--hassubmenu')
+            a(href='#' class='header__menu-submenu-link') Проекты
+            ul.header__submenu-list 
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Проект1
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Проект2
+              li.header__submenu-item 
+                a(href='#' class='header__menu-link') Проект3
+          li.header__menu-item 
+            a(href='#' class='header__menu-link') Новости
+          li.header__menu-item 
+            a(href='#' class='header__menu-link') FAQ
+          li.header__menu-item 
+            a(href='#' class='header__menu-link') Контакты
+        a(class='header__link header__link--mobile main-btn' href="#popup-feedback" data-fancybox) связаться с нами
+      a(class='header__link header__link--desktop main-btn' href="#popup-feedback" data-fancybox) связаться с нами
+      button.header__burger

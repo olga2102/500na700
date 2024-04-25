@@ -1,0 +1,11 @@
+div(class='popup' id='popup-feedback')
+    h3.popup__heading Связаться с нами
+    form(action="")
+        div.popup__inner
+            input(type='text' name='name' class='popup__input' placeholder='Имя')
+            input(type='tel' name='tel' class='popup__input' placeholder='Телефон')
+        label.form__checkbox
+            input(type='checkbox' name='personalDataAgree' style='display:none')
+            span.form__checkbox-input
+            span.form__checkbox-text Я согласен (-а) на обработку персональных данных
+        button(class='form__button main-btn') Отправить

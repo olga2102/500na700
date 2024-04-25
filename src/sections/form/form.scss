@@ -1,0 +1,119 @@
+.form {
+    padding: calc(30px + (80 - 30) * (100vw - 360px) / (1920 - 360)) 0; 
+    background-color: white;
+}
+
+.form__wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+}
+
+.form__heading {
+    color:  var(--black);
+    width: min-content;
+}
+
+.form__text {
+    color:  var(--black);
+}
+
+.form__left {
+    width: min-content;
+
+    @media (max-width: 599px) {
+        width: fit-content;
+    }
+}
+
+.form__right {
+    width: 65%;
+
+    @media (max-width: 1023px) {
+        width: 100%;
+    }
+}
+
+.form__inner {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 599px) {
+        display: block;
+    }
+}
+
+.form__checkbox-text {
+    display: block;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: .5;
+}
+
+.form__checkbox {
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__checkbox-input {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background: 
+    linear-gradient(white 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to bottom, #FB8627, #F5BEF6) border-box;
+    border: 1px solid transparent;
+   
+    opacity: 1 !important;
+}
+  
+input:checked+.form__checkbox-input {
+    background: linear-gradient(180deg, rgb(251, 134, 39) 30%, rgb(245, 190, 246) 90%);
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 9px;
+        background-image: url('../img/arrow-form.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.form__button {
+    color: var(--black);
+    background: 
+    linear-gradient(white 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to bottom, #FB8627, #F5BEF6) border-box;
+}
+
+.form__input {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+
+    @media (max-width: 599px) {
+        margin-bottom: 20px;
+        max-width: 100%;
+        width: 100%;
+    }
+}

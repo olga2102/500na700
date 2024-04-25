@@ -1,0 +1,163 @@
+@import './mixins';
+
+/* Глобальные стили */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Вызываем миксин font-face для подключение шрифта */
+@include font-face('Inter', 'Inter-Regular', 400);
+@include font-face('Inter', 'Inter-Medium', 500);
+@include font-face('Inter', 'Inter-Semibold', 600);
+
+
+
+
+:root {
+	--black: #0F0F17;
+}
+
+/* Основные стили */
+body {
+  margin: 0;
+  position: relative;
+  display: block;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: var(--black);
+  color: white;
+
+  &.overflow {
+    overflow: hidden !important;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 1440px;
+  width: 100%;
+
+  @media (max-width: 1023px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 599px) {
+    padding: 0 1rem;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h2 {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 110%;
+  text-transform: uppercase;
+
+  @media (max-width: 1190px) {
+    font-size: 2.3rem;
+  }
+
+  @media (max-width: 599px) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 110%;
+  text-transform: uppercase;
+
+  @media (max-width: 1190px) {
+    font-size: 1.3rem;
+  }
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 130%;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  transition: .3s linear;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(180deg, rgb(251, 134, 39) 30%, rgb(245, 190, 246) 90%);
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: var(--black);
+  font-size: 16px;
+  line-height: 130%;
+  opacity: 0.5;
+}
+
+input::-moz-placeholder {
+  color: var(--black);
+  font-size: 16px;
+  line-height: 130%;
+  opacity: 0.5;
+}
+
+input:-ms-input-placeholder {
+  color: var(--black);
+  font-size: 16px;
+  line-height: 130%;
+  opacity: 0.5;
+}
+
+input {
+  padding: 15px;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 130%;
+  border: 1px solid var(--black);
+  border-radius: 10px;
+}
+
+/* Подключаем стили секций */
+@import '../../sections/example/example';
+@import './header';
+@import '../../sections/hero/hero';
+@import '../../sections/news/news';
+@import '../../sections/faq/faq';
+@import '../../sections/form/form';
+@import '../../sections/popup/popup';
+@import './footer';

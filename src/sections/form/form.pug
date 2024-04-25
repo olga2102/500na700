@@ -1,0 +1,18 @@
+section.form 
+    div.container
+        div.form__wrapper
+            div.form__left
+                h2.form__heading Подпишись на&nbsp;рассылку
+                p.form__text Отправляем анонсы новых статей, выпусков и трансляций
+            .form__right
+                form(action="")
+                    div.form__inner
+                        input(type='email' name='email' class='form__input' placeholder='Электронная почта')
+                        input(type='text' name='date' class='form__input' placeholder='Дата (например, 01.01.1990)')
+                        input(type='tel' name='tel' class='form__input' placeholder='Телефон')
+                        input(type='text' name='time' class='form__input' placeholder='Время (например, 10:00)')
+                    label.form__checkbox
+                        input(type='checkbox' name='personalDataAgree' style='display:none')
+                        span.form__checkbox-input
+                        span.form__checkbox-text Я согласен (-а) на обработку персональных данных
+                    button(class='form__button main-btn') Подписаться

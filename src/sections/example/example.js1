@@ -1,0 +1,11 @@
+// import $ from 'jquery';
+
+// export default function () {
+//   console.log('This is example.js');
+//   const $section = $('section.example');
+//   if ($section.length) {
+//     $section.on('click', function () {
+//       alert('Click on Example section');
+//     });
+//   }
+// }
